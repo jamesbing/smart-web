@@ -1,3 +1,3 @@
 # smart-web
 
-1. fovoy.com first websit
+* fovoy.com first websit
