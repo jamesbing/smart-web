@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link rel="shortcut icon" type="image/x-icon"  rel="icon" href="favicon.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Trudge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+
+</head>
+<body ng-app="starter">
+<!--header-->
+<div class="banner banner-in">
+    <div class="header" ng-include="'head.html'">
+    </div>
+    <div class="barcontainer">
+        <h7><a href="/index.html">首页</a>/ <span>{{ser.realname}}</span></h7>
+    </div>
+</div>
+<!---->
+<div class="container">
+    <div class="single">
+        <div class="single-middle">
+            <div class="col-md-7 need">
+                <img class="img-responsive" ng-src="{{ser.image}}" alt="">
+            </div>
+            <div class="col-md-5 tag">
+                <div class="social-in">
+                    <div class="col-md-3 date">
+                        <p>姓名 <span ng-bind="ser.realname"></span></p>
+                    </div>
+                    <div class="col-md-4 date">
+                        <p>电话<span ng-bind="ser.phone"></span></p>
+                    </div>
+                    <div class="col-md-2 date">
+                    <p>从业时间<span ng-bind="ser.serviceAge"></span></p>
+                    </div>
+                    <div class="col-md-3 date">
+                        <p>服务等级<span ng-bind="ser.servicegrade"></span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <p class="tag-in">
+                    <span ng-bind="ser.message"></span>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="comments-area">
+            <h5>填写联系方式</h5>
+            <p>方便{{ser.realname}}及时为您服务</p>
+            <form name="f" id ="f" ng-submit="submit()">
+                <p>
+                    <span>姓名</span>
+                    <input type="text" value="" ng-model="cantact.name" placeholder="请输入姓名" ng-trim="true" required>
+                </p>
+                <p>
+                    <span>手机号码</span>
+                    <input type="text" value="" ng-model="cantact.phone" placeholder="请输入手机号码" ng-pattern="ph" required>
+                     <span class="error" ng-show="f.input.$error.required">
+                        Phone!</span>
+                     <span class="error" ng-show="f.input.$valid">
+                        Phone error!</span>
+                </p>
+                <div class="sub-in" ng-disable="f.$invalid">
+                    <input type="submit" value="提交" ng-disable="f.$invalid" >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="content-bottom-in">
+    <div class="container">
+        <ul class="social">
+            <li><a href="#"><i> </i></a></li>
+            <li><a href="#"><i class="twitter"> </i></a></li>
+            <li><a href="#"><i class="dribble"> </i></a></li>
+            <li><a href="#"><i class="gmail"> </i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!---->
+<div class="footer" ng-include="'footer.html'"></div>
+</body>
+</html>
+			
